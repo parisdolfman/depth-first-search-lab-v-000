@@ -16,8 +16,8 @@ function depthFirstSearch(rootNode, vertices, edges) {
 
 function findAdjacent(name, vertices, edges) {
   let adjacent = edges.filter(edge => edge.includes(name))
-                    .map(edge => edge.filter(v => v != name)) //remove self
-                    .map(v => v[0]); // flatten
+                    .map(edge => edge.filter(v => v != name))
+                    .map(v => v[0]);
 
   return vertices.filter(vertex =>
                               adjacent.includes(vertex.name) &&
